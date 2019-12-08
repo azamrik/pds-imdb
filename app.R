@@ -20,8 +20,8 @@ genreList <- sort(unique(basics_ratings$genre, incomparables = FALSE))
 ###############################
 ### scatter plot  variables ###
 ###############################
-principals <- subset((read_csv("/Users/ahmad/Documents/RRR/Shiny/git/pds-imdb/principals.csv", na = "\\N")), select = -c(characters))
-actorNames <- subset((read_csv("/Users/ahmad/Documents/RRR/Shiny/git/pds-imdb/names.csv", na = "\\N")), select = -c(birthYear, deathYear, primaryProfession, knownForTitles))
+principals <- subset((read_csv("principals.csv", na = "\\N")), select = -c(characters))
+actorNames <- subset((read_csv("names.csv", na = "\\N")), select = -c(birthYear, deathYear, primaryProfession, knownForTitles))
 
 
 
