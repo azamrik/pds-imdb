@@ -42,7 +42,7 @@ ui <- fluidPage(
              ),
   
     # Application title
-    titlePanel("IMDB Data Analysis"),
+    titlePanel("The Reel Deal: A look into modern cinema"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
