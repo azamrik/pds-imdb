@@ -133,8 +133,8 @@ server <- function(input, output, session) {
             geom_bar(stat = "count") +
             theme_minimal() +
             labs(x = "Rating") +
-            labs(y = "Count") +
-            labs(title = "Titles destribution per rating") +
+            labs(y = "Movies") +
+            labs(title = "Titles distribution per rating") +
             labs(fill = "")
             , dynamicTicks = TRUE
             , tooltip = c("fill", "y", "avgRating2")
@@ -175,9 +175,9 @@ server <- function(input, output, session) {
                 "\nAvg Rating:\t", mean_imdb_rating)
               )) +
             geom_point(alpha = 0.6) +
-            xlab("Number of moves")+
+            xlab("Number of movies")+
             ylab("Average ratings")+
-            ggtitle("Cast Avg Rating per Category")+
+            ggtitle("Cast's average rating and\nmovie counts")+
             theme_minimal() +
             theme(legend.position = "none"),
           tooltip="text"
