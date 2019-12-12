@@ -1,49 +1,174 @@
-The Reel Deal: A look into modern cinema
+<style type="text/css">
+.reveal table{
+  font-size:0.5em;
+}
+.section .reveal .state-background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:darken;
+    background-image: url('https://drive.google.com/uc?id=1s_tNafyahy0hSzEF881mZWniOANeJ9kJ'),url('/Users/ahmad/Documents/RRR/Shiny/git/pds-imdb/presentation-figure/test.jpg'), url('presentation-figure/test.jpg');
+}
+
+
+</style>
+The Reel Deal: A Look into Modern Cinema 
 ========================================================
-date: Dec, 2019
-autosize: true
+date: December 16, 2019
+width:1300
 author: 
- - Ahmad Zamrik (WQD190033)
- - Wong Wai Cheng (WQD190015)
- - Wai Chee San (WQD190010)
- - Nik Syen Chyn (WQD190006)
+<div class="custom">
+<h4 style="color:white;font-weight:bolder;font-size:40px;font-family:'News Cycle', Impact, sans-serif;">The Reelers</h4>
+<ul class="custom">
+<li style="font-family:sans-serif; color:white;">Ahmad Zamrik (WQD190033)</li>
+<li style="font-family:sans-serif; color:white;">Wong Wai Cheng (WQD190015)</li>
+<li style="font-family:sans-serif; color:white;">Wei Chee San (WQD190010)</li>
+<li style="font-family:sans-serif; color:white;">Nik Syen Chyn (WQD190006)</li>
+</ul>
+</div>
 
-What is IMDB
+Introduction
 ========================================================
+transition: concave
+left: 50%
 
-IMDB is a website that hosts information about movies, TV shows and the people who work in the film industry.
+<style>
 
-It was created by Amazon in 17 October 1990, 29 years ago.
+/* slide titles */
+.reveal h3 { 
+  font-size: 50px;
+  color: black;
+}
 
-<a href="https://www.imdb.com" >
-<img src="https://ksassets.timeincuk.net/wp/uploads/sites/54/2015/10/IMDB-homepage-1.jpg" style="height:300px;alight:center;">
-</a>
+/* heading for slides with two hashes ## */
+.reveal .slides section .slideContent h2 {
+   font-size: 30px;
+   font-weight: bold;
+   color: black;
+}
 
-Purpose & Scope
+/* ordered and unordered list styles */
+.reveal ul, 
+.reveal ol {
+    font-size: 20px;
+    color: black;
+    list-style-type: square;
+}
+
+</style>
+
+## Motivation
+- Culture industry is the concept of capitalization of popular culture into a profit industry with production of standardized cultural products as well as standardized consumers that are mold to feed into this system (Adorno and Horkheimer, 1944).
+- In Malaysia, the film industry is a growing asset in this country's creative industry.
+- Film industry also contributes to economic growth of a country.
+
+## Goal
+ - Create and application that allow users to visualize the ups and downs of the film industry through IMDB data.
+
+***
+
+| Total/Year                             | 2015  | 2016  | 2017  | 2018  |
+| ---------------------------------------|:-----:| -----:| -----:| -----:|
+| Gross collection (MYR in millions)     | 869.10| 915.30| 983.64|1004.00| 
+| Number of cinemas                      | 141   | 144   | 151   | 156   |
+| Number of screens                      | 944   | 991   | 1094  | 1094  |
+| Number of seats (in thousands)         | 163   | 172   | 185   | 186   |
+| Admissions collection (MYR in millions)| 68.11 | 71.63 | 72.84 | 77.31 |
+
+## FINAS: Collection and Admission For All Local and Foreign Films In Cinema: 2015 - 2018</p>
+
+Methodology
 ========================================================
-<h4>Purpose</h4>
-Our purpose from building this applciation is to analyze the performance of visual entertainment media across genres over a period of time.</p>
-<h4>Scope</h4>
-We have set a list of rules to narrow down the scope of our analysis:
-- Only movies will be included
-- Only movies with reviews
+transition: concave
+left: 60%
+<style>
 
-Data sources
+/* slide titles */
+.reveal h3 { 
+  font-size: 50px;
+  color: black;
+}
+
+/* heading for slides with two hashes ## */
+.reveal .slides section .slideContent h2 {
+   font-size: 30px;
+   font-weight: bold;
+   color: black;
+}
+
+/* ordered and unordered list styles */
+.reveal ul, 
+.reveal ol {
+    font-size: 20px;
+    color: black;
+    list-style-type: square;
+}
+
+</style>
+
+## Framework
+![](https://drive.google.com/uc?id=19DgsKwIuLuk_yjR6XvFFlHO34LCEec8h)
+
+***
+
+## Questions
+- What is the distribution of movie counts for each rating for different genres of films?
+- What is the trend of average ratings over a period of time for different genres of films?
+- What is the average ratings of cast members and the number of movies that they have worked on?
+- How does the network relationship between cast members look like?
+  
+
+Data processing
 ========================================================
-We have retrieved the data from the <a href="https://www.imdb.com/interfaces/"> IMDb datasets website</a>. Our aim is to build an analysis to answer the following questions:
- - How do ratings compare across genres over time?
- - What is the movie/rating destribution?
- - How many links are there between directors and other cast members cross-movies?
- - What is the overall rating of all the movies for a group of cast members based on movie selection
+transition: concave
+left: 60%
+<!-- ![](presentation-figure/fig5.jpg) -->
+![](https://drive.google.com/uc?id=137oLBe0pKL4qPX-AOc78A9G6zd8okbww)
 
+***
 
-The analysis
+- Raw data:
+  + Too large to work with
+  + Contains a lot of unneccessary columns that are no use for our application
+  + Missing data that are inconsistent in format
+
+Visualization
 ========================================================
-Our analysis is done via R Shiny app. You can interact with the app in the following ways:
- - Filter by minum review votes a movie must have
+transition: concave
+left: 40%
+-Our analysis is done via R Shiny app. You can interact with the app in the following ways:
+ - Filter by minimum review votes a movie must have
  - Filter by production year range
- - Filter by movie genre
- - Select movies from the table to see more details about their cast
+ - Filter by movie genre(s)
+ - Select movies from the table to see more details about their cast (ratings and network)
 
-<a href="https://azamrik.shinyapps.io/pds-imdb/">Click here to go to the app</a><br/>
-<a href="https://github.com/azamrik/pds-imdb">Click here to go to the GitHub</a>
+
+
+![](https://drive.google.com/uc?id=1trjZWMEbyUoCQ6EG_1o43RrypKfMmbKJ)
+
+
+Conclusion
+========================================================
+transition: concave
+left: 50%
+
+|CHALLENGES                        |SOLUTIONS                                                   |
+|-----------------------------------|------------------------------------------------------------|
+|First time building an application.|Go through various blogs and Shiny documentation.           |
+|Files too large to work with.      |Reduce dataset to include only important info.              |
+|R coding level: Beginner           |Go through tutorials online and consult experienced friends.|
+|Business understanding: Average    |Talk to friends/colleague and read articles/papers.         |
+|Difficulty in meeting as a team    |Update each other regularly online and meet physically whenever we can.|
+
+***
+
+We have:
+  + became more experienced in R coding.
+  + learned more about the trends in film industry.
+  + learned how to build a Shiny application.
+  + became more familiar with the Data Science pipeline and mindset.
+
+Links:
+  + Dataset: <a href="https://datasets.imdbws.com/">Click here for IMDB raw datasets</a><br/>
+  + Shinyapp: <a href="https://azamrik.shinyapps.io/pds-imdb/">Click here for our Shiny app</a><br/>
+  + Code: <a href="https://github.com/azamrik/pds-imdb">Click here for our code on GitHub</a>
