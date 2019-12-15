@@ -1,13 +1,13 @@
 <style type="text/css">
 .reveal table{
-  font-size:0.5em;
+  font-size:0.6em;
 }
 .section .reveal .state-background {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-blend-mode:darken;
-    background-image: url('https://drive.google.com/uc?id=1s_tNafyahy0hSzEF881mZWniOANeJ9kJ'),url('/Users/ahmad/Documents/RRR/Shiny/git/pds-imdb/presentation-figure/test.jpg'), url('presentation-figure/test.jpg');
+    background-image:url('https://drive.google.com/uc?id=1s_tNafyahy0hSzEF881mZWniOANeJ9kJ'),url('/Users/ahmad/Documents/RRR/Shiny/git/pds-imdb/presentation-figure/test.jpg'), url('presentation-figure/test.jpg');
 }
 
 
@@ -80,7 +80,7 @@ left: 50%
 Methodology
 ========================================================
 transition: concave
-left: 60%
+left: 40%
 <style>
 
 /* slide titles */
@@ -106,8 +106,10 @@ left: 60%
 
 </style>
 
-## Framework
 ![](https://drive.google.com/uc?id=19DgsKwIuLuk_yjR6XvFFlHO34LCEec8h)
+
+![](https://drive.google.com/uc?id=137oLBe0pKL4qPX-AOc78A9G6zd8okbww)
+
 
 ***
 
@@ -116,33 +118,18 @@ left: 60%
 - What is the trend of average ratings over a period of time for different genres of films?
 - What is the average ratings of cast members and the number of movies that they have worked on?
 - How does the network relationship between cast members look like?
-  
-
-Data processing
-========================================================
-transition: concave
-left: 60%
-<!-- ![](presentation-figure/fig5.jpg) -->
-![](https://drive.google.com/uc?id=137oLBe0pKL4qPX-AOc78A9G6zd8okbww)
-
-***
-
-- Raw data:
-  + Too large to work with
-  + Contains a lot of unneccessary columns that are no use for our application
-  + Missing data that are inconsistent in format
 
 Visualization
 ========================================================
 transition: concave
 left: 40%
--Our analysis is done via R Shiny app. You can interact with the app in the following ways:
+Our analysis is done via R Shiny app. You can interact with the app in the following ways:
  - Filter by minimum review votes a movie must have
  - Filter by production year range
  - Filter by movie genre(s)
  - Select movies from the table to see more details about their cast (ratings and network)
 
-
+***
 
 ![](https://drive.google.com/uc?id=1trjZWMEbyUoCQ6EG_1o43RrypKfMmbKJ)
 
