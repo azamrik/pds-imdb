@@ -239,8 +239,8 @@ server <- function(input, output, session) {
         )
       ) +
         geom_point(alpha = 0.6) +
-        xlab("Number of movies") +
-        ylab("Average ratings") +
+        ylab("Number of movies") +
+        xlab("Average ratings") +
         ggtitle("Cast's average rating and\nmovie counts") +
         theme_minimal() +
         theme(legend.position = "none"),
